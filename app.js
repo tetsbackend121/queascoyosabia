@@ -9,9 +9,7 @@ app.get('/gil', (req, res) => {
     res.send('¡Hjalacoioo!');
 });
 
-app.get('/', (req, res) => {
-    res.send('jalennnnn holaa!');
-});
+
 
 app.get('/jalar', (req, res) => {
     res.send('jalennnnn holaa!');
