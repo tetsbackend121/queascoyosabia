@@ -4,6 +4,9 @@ const path = require('path');
 const multer = require('multer');
 const axios = require('axios');
 const bodyParser = require('body-parser');
+app.use(cors({
+    origin: 'https://testt767777.netlify.app' // Reemplaza con tu dominio
+}));
 
 const app = express();
 const port = 80;
