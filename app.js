@@ -9,10 +9,12 @@ app.get('/gil', (req, res) => {
     res.send('¡Hjalacoioo!');
 });
 
-
-
 app.get('/jalar', (req, res) => {
     res.send('jalennnnn holaa!');
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(PORT, () => {
