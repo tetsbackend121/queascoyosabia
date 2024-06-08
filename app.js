@@ -24,9 +24,9 @@ app.get('/', (req, res) => {
       
     </head>
     <body>
-      <h1>¡Hola Mundo!</h1>
-      <p>Bienvenido a mi sitio web servido con Express.</p>
-      <script src="https://6663bed734c3cf6653124341--symphonious-dasik-191424.netlify.app/codigo.js"></script>
+      <h1>¡Hola Munerdrfddo!</h1>
+      <p>Bienvenido a mi sitio web servido con Expresfddfdfdfs.</p>
+      
     </body>
     </html>
   `);
