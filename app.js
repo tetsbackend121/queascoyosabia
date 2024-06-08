@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     <body>
       <h1>¡Hola Mundo!</h1>
       <p>Bienvenido a mi sitio web servido con Express.</p>
-      <script src="/js/scripts.js"></script>
+      <script src="js/codigo.js"></script>
     </body>
     </html>
   `);
