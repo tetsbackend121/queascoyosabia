@@ -13,9 +13,6 @@ const db = 'mongodb+srv://reypele18:mierda@dealgo.psquqeb.mongodb.net/DatosPriva
 let globalusuario;
 let pagina = {};
 
-app.use(cors({
-    origin: 'https://testt767777.netlify.app' // Reemplaza con tu dominio
-}));
 
 mongoose.connect(db, {}).then(() => {
     console.log("Conexión exitosa a la base de datos");
