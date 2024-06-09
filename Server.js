@@ -74,7 +74,7 @@ app.post('/login', async (req, res) => {
 });
 
 app.get("/" , async (req, res) => {
-    const url = 'https://testt767777.netlify.app/index.html';
+    const url = 'https://frontendiniciar.onrender.com/';
     try {
         const response = await axios.get(url);
         const htmlContent = response.data;
