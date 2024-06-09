@@ -13,6 +13,13 @@ const db = 'mongodb+srv://reypele18:mierda@dealgo.psquqeb.mongodb.net/DatosPriva
 let globalusuario;
 let pagina = {};
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://frontendiniciar.onrender.com');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
+
 
 mongoose.connect(db, {}).then(() => {
     console.log("Conexión exitosa a la base de datos");
