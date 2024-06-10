@@ -12,6 +12,12 @@ const db = 'mongodb+srv://reypele18:mierda@dealgo.psquqeb.mongodb.net/DatosPriva
 let globalusuario;
 let pagina = {};
 
+app.use(cors({
+    origin: 'https://frontendiniciar.onrender.com', // Reemplaza con el dominio de tu frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 mongoose.connect(db, {}).then(() => {
     console.log("Conexión exitosa a la base de datos");
 }).catch((error) => {
