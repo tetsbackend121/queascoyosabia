@@ -4,6 +4,7 @@ const path = require('path');
 const multer = require('multer');
 const axios = require('axios');
 const bodyParser = require('body-parser');
+const cors = require('cors'); 
 
 const app = express();
 const port = 80;
