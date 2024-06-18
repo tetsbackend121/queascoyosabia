@@ -169,7 +169,7 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
         tipo = my_list[2];
         console.log("Mira mi listaa: " + str(my_list))
         
-        const conttype = my_list[3] + "/" + my_list[4];
+        conttype = my_list[3] + "/" + my_list[4];
         console.log("Mira mi ccca: " + str(conttype))
         
     } catch {
