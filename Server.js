@@ -167,8 +167,10 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
         fromusername = my_list[1];
         recipient = my_list[0];
         tipo = my_list[2];
+        console.log("Mira mi listaa: " + str(my_list))
         
         const conttype = my_list[3] + "/" + my_list[4];
+        console.log("Mira mi ccca: " + str(conttype))
         
     } catch {
         console.log("Error al procesar los datos del archivo");
