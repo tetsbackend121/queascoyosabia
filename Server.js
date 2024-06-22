@@ -173,9 +173,11 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
         
         
         
-    } catch {
-        console.log("Error archivo DEL ORTO");
-    }
+    }  catch (error) {
+         
+    console.error("Error al procesar el archivoddCACA:", error);
+}
+
 
     try {
         if (fromusername == recipient) {
