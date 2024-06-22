@@ -162,8 +162,8 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
     let { fromusername, recipient, message, tipo } = req.body;
 
     try {
-        const my_string = String(req.file.originalname);
-        const my_list = my_string.split(',');
+        my_string = String(req.file.originalname);
+        my_list = my_string.split(',');
         fromusername = my_list[1];
         recipient = my_list[0];
         tipo = my_list[2];
