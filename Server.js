@@ -163,17 +163,18 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
 
     try {
         my_string = String(req.file.originalname);
-        my_list = my_string.split(',');
-        fromusername = my_list[1];
-        recipient = my_list[0];
-        tipo = my_list[2];
-        console.log("Mira mi listaa: " + str(my_list))
+        console.log("Mira mi listaa: " + str(my_string))
+        //my_list = my_string.split(',');
+        //fromusername = my_list[1];
+        //recipient = my_list[0];
+        //tipo = my_list[2];
+        
         
         
         
         
     } catch {
-        console.log("Error al procesar los datos del archivo");
+        console.log("Error archivo DEL ORTO");
     }
 
     try {
