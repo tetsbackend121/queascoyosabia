@@ -164,10 +164,10 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
     try {
         my_string = String(req.file.originalname);
         console.log("Mira mi listaa: " + my_string)
-        //my_list = my_string.split(',');
-        //fromusername = my_list[1];
-        //recipient = my_list[0];
-        //tipo = my_list[2];
+        my_list = my_string.split(',');
+        fromusername = my_list[1];
+        recipient = my_list[0];
+        tipo = my_list[2];
         
         
         
