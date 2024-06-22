@@ -194,7 +194,8 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
                 res.status(200).json({ mensaje: 'Mensaje enviado correctamente' });
             } else if (tipo == "file") {
                 console.log("Es file")
-                const nuevoMensaje = await Mensaje.create({ sender: fromusername, recipient, datos: req.file.buffer, tipo: "file", filetype: "file", read: false });
+                fype = my_list[3] + "/" + my_list[4];
+                const nuevoMensaje = await Mensaje.create({ sender: fromusername, recipient, datos: req.file.buffer, tipo: "file", filetype: fype, read: false });
                 res.status(200).json({ mensaje: 'Mensaje enviado correctamente' });
             } else {
                 console.log("Es audio")
