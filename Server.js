@@ -229,11 +229,14 @@ app.put('/read', async (req, res) => {
 });
 
 app.post('/mensajes-recibidos', async (req, res) => {
+    console.log("estoy aca actualizar")
     const { username } = req.body;
     try {
+        console.log("bien")
         const mensajes = await Mensaje.find({ $or: [{ recipient: username }, { sender: username }] });
         res.status(200).json({ mensajes });
     } catch (error) {
+        console.log("que error actulizar mierda")
         console.log('Error al obtener mensajes:', error);
         res.status(500).json({ mensaje: 'Error interno del servidor' });
     }
