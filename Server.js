@@ -178,7 +178,7 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
 
      }
 
-})
+
 
   
 
@@ -212,6 +212,7 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
         res.status(500).json({ mensaje: 'Error interno del servidor' });
     }
 
+})
 
 app.put('/read', async (req, res) => {
     const { id } = req.body;
