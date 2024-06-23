@@ -160,43 +160,27 @@ app.get('/home', (req, res) => {
 
 app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
     let { fromusername, recipient, message, tipo } = req.body;
-
     try {
-        
-        // Asegúrate de que req.file.originalname tenga un valor válido
-        if (!req.file || !req.file.originalname) {
-            
-            throw new Error('El nombre de archivo original no está presente en la solicitud.');
-        }
-    
-        // Convertir el nombre de archivo a una cadena (si no lo es ya)
-        let my_string = String(req.file.originalname);
-    
-        // Imprimir para verificar que se obtuvo el nombre correctamente
-        console.log("Nombre de archivo original: " + my_string);
-    
-        // Dividir la cadena usando comas como separadores
-        let my_list = my_string.split(',');
-    
-        // Asegúrate de que my_list tenga al menos 3 elementos antes de acceder a ellos
-        if (my_list.length < 3) {
-            throw new Error('El nombre de archivo no tiene el formato esperado.');
-        }
-    
-        // Acceder a los elementos de la lista
-        let fromusername = my_list[1];  // Usar trim() para eliminar espacios en blanco alrededor
-        let recipient = my_list[0];
-        let tipo = my_list[2];
-    
-        // Usar los valores obtenidos según sea necesario
-        console.log("Remitente: " + fromusername);
-        console.log("Destinatario: " + recipient);
-        console.log("Tipo: " + tipo);
+        my_string = String(req.file.originalname);
+        console.log("Mira mi listaa: " + my_string)
+        my_list = my_string.split(',');
+        fromusername = my_list[1];
+        recipient = my_list[0];
+        tipo = my_list[2];
 
-} catch (error) {
-    // Capturar y manejar cualquier error que ocurra durante el proceso
-    console.log("Error del orto", error);
-}
+
+
+
+
+    }  catch (error) {
+
+    console.error("Error al procesar el archivoddCACA0000:", error);
+
+     }
+
+})
+
+  
 
 
     try {
@@ -227,7 +211,7 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
         console.log('Error al enviar mensaje:', error);
         res.status(500).json({ mensaje: 'Error interno del servidor' });
     }
-});
+
 
 app.put('/read', async (req, res) => {
     const { id } = req.body;
