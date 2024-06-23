@@ -194,8 +194,16 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
         console.log("Tipo: " + tipo);
 
 } catch (error) {
+        
+        if (error instanceof TypeError) {
+            
+            console.log(`TypeError occurred ya esta gil:);
+        } else {
+        
+            console.log(`Unexpected error occurred caca:);
+        }
     // Capturar y manejar cualquier error que ocurra durante el proceso
-    console.log("Error del orto", error);
+    
 }
 
 
