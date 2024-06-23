@@ -48,8 +48,9 @@ const upload = multer({ storage: storage });
 
 
 app.use(express.json());
+app.use(express.timeout('10s')); 
 
-app.use(bodyParser.json({ limit: '10000mb' })); // Aumenta el límite de carga útil a 10 megabytes
+app.use(bodyParser.json({ limit: '50mb' })); // Aumenta el límite de carga útil a 10 megabytes
 
 app.post('/registro', async (req, res) => {
     const { username, password } = req.body;
