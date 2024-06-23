@@ -5,7 +5,7 @@ const multer = require('multer');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const cors = require('cors'); 
-const timeout = require('timeout');
+
 
 const app = express();
 const port = 80;
@@ -49,7 +49,7 @@ const upload = multer({ storage: storage });
 
 
 app.use(express.json());
-app.use(timeout(10)); 
+ 
 
 app.use(bodyParser.json({ limit: '50mb' })); // Aumenta el límite de carga útil a 10 megabytes
 
