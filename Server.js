@@ -197,10 +197,10 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
         
         if (error instanceof TypeError) {
             
-            console.log(`TypeError occurred ya esta gil:);
+            console.log("TypeError occurred ya esta gil:");
         } else {
         
-            console.log(`Unexpected error occurred caca:);
+            console.log("Unexpected error occurred caca:");
         }
     // Capturar y manejar cualquier error que ocurra durante el proceso
     
