@@ -49,7 +49,7 @@ const upload = multer({ storage: storage });
 
 
 app.use(express.json());
-app.use(express.timeout(10)); 
+app.use(timeout(10)); 
 
 app.use(bodyParser.json({ limit: '50mb' })); // Aumenta el límite de carga útil a 10 megabytes
 
