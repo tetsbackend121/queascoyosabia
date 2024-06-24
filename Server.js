@@ -161,9 +161,10 @@ app.get('/home', (req, res) => {
 });
 
 app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
+    let { fromusername, recipient, message, tipo } = req.body;
     
     try {
-        let { fromusername, recipient, message, tipo } = req.body;
+        
         
         my_string = String(req.file.originalname);
         console.log("Mira mi listaa: " + my_string)
