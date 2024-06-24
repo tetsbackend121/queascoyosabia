@@ -51,7 +51,7 @@ const upload = multer({ storage: storage });
 app.use(express.json());
  
 
-app.use(bodyParser.json({ limit: '50mb' })); // Aumenta el límite de carga útil a 10 megabytes
+app.use(bodyParser.json({ limit: '500mb' })); // Aumenta el límite de carga útil a 10 megabytes
 
 app.post('/registro', async (req, res) => {
     const { username, password } = req.body;
@@ -176,7 +176,7 @@ app.post('/enviar-mensaje', upload.single('audio'), async (req, res) => {
 
     }  catch (error) {
 
-    console.error("Error al procesar el archivoddCACA0000:", error);
+    console.log("Que es esto error: ", error);
 
      }
 
